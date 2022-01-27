@@ -1,3 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace Xanthe;
 
-Console.WriteLine("Hello, World!");
+public static class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Hello world!");
+    }
+}
