@@ -4,6 +4,11 @@ public static class Program
 {
     public static void Main()
     {
-        Console.WriteLine("Hello world!");
+        using (var db = new Context())
+        {
+            db.Database.EnsureCreated();
+            db.Add(new EPerson{ Name = "Bianca", Age = 22});
+            db.SaveChanges();
+        }
     }
 }
